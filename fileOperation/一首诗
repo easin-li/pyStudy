@@ -1,7 +1,0 @@
-问题就出在这边，unicode string 和 byte string 是不可以混合使用的，一旦混合使用了，就会产生这样的错误。例如：
-        self.response.out.write(“你好”+self.request.get(“argu”))
-        其中，”你好”被认为是byte string，而self.request.get(“argu”)的返回值被认为是unicode string。由于预设的解码器是ascii，所以就不能识别中文byte string。然后就报错了。
-
----------------------
-
-本文来自 周二也被占用 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/u011350541/article/details/78683682?utm_source=copy
