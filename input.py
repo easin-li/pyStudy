@@ -1,3 +1,5 @@
+
+
 name = input("Name:")
 age = input("Age:")
 score = input("Score:")
